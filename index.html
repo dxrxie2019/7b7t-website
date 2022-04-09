@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <link rel="icon" href="/icon.ico" type="image/x-icon">
+        <link rel="shortcut icon" href="/icon.ico" type="image/x-icon">
+        <meta charset="utf-8">
+        <title>MC铁杆联盟-2022</title>
+        <meta name="author" content="MC铁杆联盟">
+        <meta name="keywords" content="MC铁杆联盟">
+        <meta name="copyright" content="Copyright © 2021-2022 MC铁杆联盟 All rights reserved.">
+        <meta name="description" content="这里是MC铁杆联盟，欢迎访问">
+        <meta name="renderer" content="webkit">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black"> 
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="format-detection" content="telephone=no">
+        <meta content="always" name="referrer">
+        <meta HTTP-EQUIV="pragma" CONTENT="no-cache"> 
+        <meta HTTP-EQUIV="Cache-Control" CONTENT="no-store, must-revalidate"> 
+        <meta HTTP-EQUIV="expires" CONTENT="Wed, 26 Feb 1997 08:21:57 GMT"> 
+        <meta HTTP-EQUIV="expires" CONTENT="0">
+        <!--[if lt IE 9]>
+<scriptsrc="http://css3mediaqueriesjs.googlecode.com/svn/trunk/css3mediaqueries.js"></scrip>
+<![endif]-->
+<link type="text/css" href="css/style.css" rel="stylesheet" />
+<script src="js/vue.min.js"></script>
+<div id="clock">
+    <p class="date">{{ date }}</p>
+    <p class="time">{{ time }}</p>
+    <p class="text"></p>
+</div>
+<script>
+    var clock = new Vue({
+        el: '#clock',
+        data: {
+            time: '',
+            date: ''
+        }
+    });
+    
+    var week = ['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六'];
+    var timerID = setInterval(updateTime, 1000);
+    updateTime();
+    function updateTime() {
+        var cd = new Date();
+        clock.time = zeroPadding(cd.getHours(), 2) + ':' + zeroPadding(cd.getMinutes(), 2) + ':' + zeroPadding(cd.getSeconds(), 2);
+        clock.date = zeroPadding(cd.getFullYear(), 4) + '-' + zeroPadding(cd.getMonth()+1, 2) + '-' + zeroPadding(cd.getDate(), 2) + ' ' + week[cd.getDay()];
+    };
+    
+    function zeroPadding(num, digit) {
+        var zero = '';
+        for(var i = 0; i < digit; i++) {
+            zero += '0';
+        }
+        return (zero + num).slice(-digit);
+    }
+    </script>
+    <style>
+         body{
+      font: 16px arial,'Microsoft Yahei','Hiragino Sans GB',sans-serif;
+    }
+    h1{
+      margin: 0;
+      color:#3a87ad;
+      font-size: 26px;
+    }
+    .content{
+      width: 70%;
+      margin: 0 auto;
+     
+    }
+    .content >div{
+      margin-top: 200px;
+      padding: 20px;
+      background: #d9edf7;  
+      border-radius: 12px;
+    }
+    .content dl{
+      color: #2d6a88;
+      line-height: 40px;
+    } 
+    .content div div {
+      padding-bottom: 20px;
+      text-align:center;
+    }
+</style>
+<body background="/background.jpg">
+    </body>
+    </head>
+    <!--雪花飘落效果代码开始-->
+<p><canvas id="christmasCanvas" style="top: 0px; left: 0px; z-index: 5000; position: fixed; pointer-events: none;"></canvas> <script type="text/javascript">
+    var snow = function() {
+      if(1==1) {
+        var b = document.getElementById("christmasCanvas"), a = b.getContext("2d"), d = window.innerWidth, c = window.innerHeight;
+        b.width = d;
+        b.height = c;
+        for(var e = [], b = 0;b < 70;b++) {
+          e.push({x:Math.random() * d, y:Math.random() * c, r:Math.random() * 4 + 1, d:Math.random() * 70})
+        }
+        var h = 0;
+        window.intervral4Christmas = setInterval(function() {
+          a.clearRect(0, 0, d, c);
+          a.fillStyle = "rgba(66, 139, 202, 0.6)";
+          a.shadowBlur = 5;
+          a.shadowColor = "rgba(0, 0, 0, 0.9)";
+          a.beginPath();
+          for(var b = 0;b < 70;b++) {
+            var f = e[b];
+            a.moveTo(f.x, f.y);
+            a.arc(f.x, f.y, f.r, 0, Math.PI * 2, !0)
+          }
+          a.fill();
+          h += 0.01;
+          for(b = 0;b < 70;b++) {
+            if(f = e[b], f.y += Math.cos(h + f.d) + 1 + f.r / 2, f.x += Math.sin(h) * 2, f.x > d + 5 || f.x < -5 || f.y > c) {
+              e[b] = b % 3 > 0 ? {x:Math.random() * d, y:-10, r:f.r, d:f.d} : Math.sin(h) > 0 ? {x:-5, y:Math.random() * c, r:f.r, d:f.d} : {x:d + 5, y:Math.random() * c, r:f.r, d:f.d}
+            }
+          }
+        }, 70)
+      }
+    }
+    snow();
+  </script></p>
+  <div class="snow-container"></div>
+  <!--雪花飘落效果代码结束-->
+    <body>
+        <div class="content">
+            <div>
+                <center><h1>MC铁杆联盟官网</h1></center>
+                <dl>
+                    <dt>本站独家资源</dt>
+                    <a href="/download/jdk16.zip">java16</a>
+                    <a href="/download/JavaSetup8u181.exe">java8</a>
+                    <a href="/download/cz.rar">材质包整合</a>
+                    <a href="/pages/2.html">剑客作弊端</a>
+                    <a href="/download/base1.apk">手机运行java版</a>
+                    <a href="/download/pf.rar">原神风格mc皮肤</a>
+                    <a href="/download/old pl.zip">7b7t服务器部分插件共享</a>
+                    <dt>更多资源敬请期待</dt>
+                    <dt>友情提供&友情链接:<dt>
+                    <a href="/download/Release 2.0.5.exe">PCL2启动器</a>
+                    <a href="/download/fg797p.exe">一个免费电脑翻墙软件</a>
+                    <a href="Https://www.go176.net">剑客网</a>
+                    <a href="Https://www.oracle.com">甲骨文官网</a>
+                 <dl>
+                    <a href="Https://space.bilibili.com/383110670">wuli树周的b站主页</a>
+                    <a href="Https://www.klpbbs.com/xz">mc基岩版全版本下载</a>
+                    <a href="/pages/iss-live.html">国际空间站直播</a>
+                    <dt>本站附属服务器:</dt>
+                    <dt>服务器名:OSUN普通生存联盟(俗称7b7t)</dt>
+                    <dt>创始时间:2021年4月</dt>
+                    <dt>进服方式: Java版: ip:mc1.7b7t.xyz 版本:1.4.7-1.18.2 基岩版:ip:103.218.3.213 端口:19233 版本:1.17.40-1.18.12</dt>
+                    <dt>谜之域群组服ip请加群查看公告!</dt>
+                    <dt>qq群:737477557(欢迎加群，加群获得更多资源)</dt>
+                 <a href="/pages/3.html">本站版权声明</a></dl>
+                 <a href="https://forum.7b7t.xyz">7b7t论坛</a></dl>
+                 <a href="Https://skin.7b7t.xyz">7b7t皮肤站</a></dl>
+                 <a href="http://pay.mizhiyu.xyz">赞助入口</a></dl>
+                 <dl>
+                 <h3>本站评论区<h3>
+                     <!--评论区-->
+                     <div id="SOHUCS" ></div>
+                     <script charset="utf-8" type="text/javascript">
+                         (function () {
+    if (window.changyan !== undefined || window.cyan !== undefined) {
+        return;
+    }
+    var createNs = function () {
+        if (window.changyan !== undefined) {
+            return;
+        } else {
+            window.changyan = {};
+            window.changyan.api = {};
+            window.changyan.api.config = function (conf) {
+                window.changyan.api.tmpIsvPageConfig = conf;
+                
+                (function() {
+                    try {
+                        var clientId = conf.appid;
+                        (function(i,s,o,g,r,a,m) {
+                            i['KZAnalyticsObject'] = r; i[r] = i[r] || function() {(i[r].q = i[r].q || []).push(arguments);};
+                            a = s.createElement(o); m = s.getElementsByTagName(o)[0]; a.sync = 1; a.src = g;
+                            m.parentNode.insertBefore(a, m);
+                        })(window, document, "script", "//pv.kuaizhan.com/kzcollector.min.js?version=0.1", "kaq");
+                        kaq('create', 'cy')
+                        kaq('send', 'event', 'cy-pc', 'cy-pc', clientId)
+                    } catch(e) {}
+                })();
+            };
+            window.changyan.api.ready = function (fn) {
+                window.changyan.api.tmpHandles = window.changyan.api.tmpHandles || [];
+                window.changyan.api.tmpHandles.push(fn);
+            };
+            window.changyan.ready = function (fn) {
+              if (window.changyan.rendered) {
+                fn && fn();
+              } else {
+                window.changyan.tmpHandles = window.changyan.tmpHandles || [];
+                window.changyan.tmpHandles.push(fn);
+              }
+            }
+        }
+    };
+
+    var createMobileNs = function () {
+        if (window.cyan) {
+            return;
+        }
+
+        window.cyan = {};
+        window.cyan.api = {};
+        window.cyan.api.ready = function (fn) {
+            window.cyan.api.tmpHandles = window.cyan.api.tmpHandles || [];
+            window.cyan.api.tmpHandles.push(fn);
+        };
+    };
+
+
+    var loadVersionJs = function () {
+        var loadJs = function (src, fun) {
+            var head = document.getElementsByTagName('head')[0] || document.head || document.documentElement;
+
+            var script = document.createElement('script');
+            script.setAttribute('type', 'text/javascript');
+            script.setAttribute('charset', 'UTF-8');
+            script.setAttribute('src', src);
+
+            if (typeof fun === 'function') {
+                if (window.attachEvent) {
+                    script.onreadystatechange = function () {
+                        var r = script.readyState;
+                        if (r === 'loaded' || r === 'complete') {
+                            script.onreadystatechange = null;
+                            fun();
+                        }
+                    };
+                } else {
+                    script.onload = fun;
+                }
+            }
+
+            head.appendChild(script);
+        };
+
+        window.__loadJs = loadJs
+
+        var ver = (Date.now() / 1000 / 60 / 10).toFixed(); // per 10m
+        var protocol = (('https:' == window.document.location.protocol) ? "https://" : "http://");
+        var url = protocol + 'cy-cdn.kuaizhan.com/upload/version-v3.js?' + ver;
+        loadJs(url);
+    };
+    createNs();
+    createMobileNs();
+    loadVersionJs();
+}());
+                     </script>
+                     <script type="text/javascript">
+                         window.changyan.api.config({
+                            appid: 'cyvN1tLEE',
+                            conf: 'prod_9c0ddc233d5b7e42f102b029a2e94ea8'
+                            });                           
+                    </script>
+
+                    <p class="mdui-m-t-2">
+                        <h5>Copyright © 2021-2022 <a href="/" title="MC铁杆联盟" target="_blank">MC铁杆联盟</a>. All rights reserved.</h5>
+                        </p>
+                        <script language="javascript">
+                            function backtotop(){
+                                window.location.href=window.location.href;
+                                }
+                        </script>
+                        <a href="javascript:backtotop();">回到顶部</a>
+                        <dl>
+                            <!--站长统计-->
+                            <script type="text/javascript">document.write(unescape("%3Cspan id='cnzz_stat_icon_1280782322'%3E%3C/span%3E%3Cscript src='https://v1.cnzz.com/z_stat.php%3Fid%3D1280782322%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>
+                            </dl>
+                    </div>
+                    
+                    
+                    <!--百度收录代码-->
+                    <script>
+                        var _hmt= _hmt || [];
+                        (function() {
+                             var hm = document.createElement("script");
+                             hm.src = "https://hm.baidu.com/hm.js?9c221af010a163bdd2a5ae2cde8b62dc";
+                             var s = document.getElementsByTagName("script")[0];
+                             s.parentNode.insertBefore(hm, s);
+                         })();
+                         </script>
+
+  <script>
+      var bds = {
+        se: {},
+        su: {
+        urdata:[],
+        urSendClick:function(){}
+    },
+    util: {},
+    use: {},
+    comm: {
+        domain:"http:\/\/www.baidu.com",
+        ubsurl : "https:\/\/sp1.baidu.com\/5bU_dTmfKgQFm2e88IuM_a\/w.gif",
+        tn:"baidu",
+        queryEnc:"",
+        queryId:"",
+        inter:"",
+        templateName:"",
+        sugHost : "https:\/\/sp1.baidu.com\/5a1Fazu8AA54nxGko9WTAnF6hhy\/su",
+        query : "",
+        dpquery: "",
+        qid : "8b624dba00044157",
+        cid : "0",
+        sid : "34443_35106_31660_35457_34584_35490_35245_34578_35233_35318_26350",
+        indexSid : "34443_35106_31660_35457_34584_35490_35245_34578_35233_35318_26350",
+        stoken : "",
+        serverTime : "1639743987",
+        user : "",
+        username : "",
+        userid : "",
+        loginAction : [],
+        useFavo : "",
+        pinyin : "",
+        favoOn : "",
+        userAgent : "Mozilla\/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/96.0.4664.110 Safari\/537.36",
+                curResultNum:"0",
+        rightResultExist:false,
+        protectNum:0,
+        zxlNum:0,
+        pageNum:1,
+        pageSize:10,
+        newindex:0,
+        async:2,
+        maxPreloadThread:5,
+        maxPreloadTimes:10,
+        preloadMouseMoveDistance:5,
+        switchAddMask:false,
+        isDebug:false,
+        ishome : 1,
+        flagTranslateResult:0,
+        globalLogFlag:0
+    ,encTn:'604bZbITTFb3t6zMz+mF4Q9TrLCHKuNJ1nym9sucxo3lQxhEobjsYKhtLFY'    }
+};
+	
+
+var name,navigate,al_arr=[];
+
+var selfOpen = window.open;
+eval("var open = selfOpen;");
+
+var isIE = navigator.userAgent.indexOf("MSIE") != -1 && !window.opera;
+
+var E = bds.ecom = {};
+
+bds.se.mon = {
+    loadedItems: [],
+    load: function() {},
+    srvt:-1
+};
+try { 
+    bds.se.mon.srvt = parseInt(document.cookie.match(new RegExp("(^| )BDSVRTM=([^;]*)(;|$)"))[2]);
+    document.cookie = "BDSVRTM=;expires=Sat, 01 Jan 2000 00:00:00 GMT"
+} catch (e) {}
+var
+bdUser        = bds.comm.user?bds.comm.user:null,
+bdQuery       = bds.comm.query,
+bdUseFavo     = bds.comm.useFavo,
+bdFavoOn      = bds.comm.favoOn,
+bdCid         = bds.comm.cid,
+bdSid         = bds.comm.sid,
+bdServerTime  = bds.comm.serverTime,
+bdQid         = bds.comm.queryId,
+bdstoken      = bds.comm.stoken,
+login_success = [];
+bds.comm.sampleval= [];
+
+
+bds.comm.newTopMenu = 1;
+bds.comm.newSearchBox = 1;
+
+bds.comm.newSearchbox = 1;
+bds.comm.sIndex = 1;
+
+    bds.comm.pdc = 0;
+
+    bds.comm.newNav = 0;
+bds.comm.popUpAdvert = false
+	
+var s_domain={
+    "protocol":"https:",
+    "staticUrl":"https://dss0.bdstatic.com/5aV1bjqh_Q23odCf/",
+    "base":"home",
+    "baseuri":"/home",
+    "passconf":"http://passport.baidu.com/ubrwsbas",
+    "logout":"https://passport.baidu.com/?logout&u=",
+    "bs":"https://www.baidu.com",
+    "login":"http://passport.baidu.com/?login&tpl=super&u=",
+    "sp":"http://hi.baidu.com/",
+    "ssllist":{"su.bdimg.com":"dss0.bdstatic.com\/5a21bjqh_Q23odCf","1.ur.bdimg.com":"dss1.bdstatic.com\/k4oTfnSm1A5BphGlnYG","2.ur.bdimg.com":"dss2.bdstatic.com\/kvoTfnSm1A5BphGlnYG","3.ur.bdimg.com":"dss3.bdstatic.com\/kfoTfnSm1A5BphGlnYG","4.ur.bdimg.com":"dss0.bdstatic.com\/lPoTfnSm1A5BphGlnYG","5.ur.bdimg.com":"dss1.bdstatic.com\/l4oTfnSm1A5BphGlnYG","6.ur.bdimg.com":"dss2.bdstatic.com\/lvoTfnSm1A5BphGlnYG","7.ur.bdimg.com":"dss3.bdstatic.com\/lfoTfnSm1A5BphGlnYG","8.ur.bdimg.com":"dss0.bdstatic.com\/iPoTfnSm1A5BphGlnYG","dj0.baidu.com":"sp1.baidu.com\/-L-Wsjip0QIZ8tyhnq","dj1.baidu.com":"sp1.baidu.com\/-L-Xsjip0QIZ8tyhnq","dj2.baidu.com":"sp2.baidu.com\/-L-Ysjip0QIZ8tyhnq","eclick.baidu.com":"sp3.baidu.com\/-0U_dTmfKgQFm2e88IuM_a","a.hiphotos.baidu.com":"dss0.baidu.com\/94o3dSag_xI4khGko9WTAnF6hhy","b.hiphotos.baidu.com":"dss1.baidu.com\/9vo3dSag_xI4khGko9WTAnF6hhy","c.hiphotos.baidu.com":"dss3.baidu.com\/9fo3dSag_xI4khGko9WTAnF6hhy","d.hiphotos.baidu.com":"dss0.baidu.com\/-Po3dSag_xI4khGko9WTAnF6hhy","e.hiphotos.baidu.com":"dss1.baidu.com\/-4o3dSag_xI4khGko9WTAnF6hhy","f.hiphotos.baidu.com":"dss2.baidu.com\/-vo3dSag_xI4khGko9WTAnF6hhy","g.hiphotos.baidu.com":"dss3.baidu.com\/-fo3dSag_xI4khGko9WTAnF6hhy","h.hiphotos.baidu.com":"dss0.baidu.com\/7Po3dSag_xI4khGko9WTAnF6hhy","bdimg.share.baidu.com":"dss1.baidu.com\/9rA4cT8aBw9FktbgoI7O1ygwehsv","s.share.baidu.com":"sp1.baidu.com\/5foZdDe71MgCo2Kml5_Y_D3","s1.bdstatic.com":"dss1.bdstatic.com\/5eN1bjq8AAUYm2zgoY3K","p2.youxi.bdimg.com":"dss2.bdstatic.com\/5OZ1hTW64A63otebn9fN2DJv","youxi.baidu.com":"sp3.baidu.com\/y0kThD4a2gU2pMbgoY3K","fm.baidu.com":"dss3.baidu.com\/-rd1bjeh1BF3odCf","music.baidu.com":"dss2.baidu.com\/8_1ZdTna2gU2pMbgoY3K","f3.baidu.com":"sp2.baidu.com\/-uV1bjeh1BF3odCf","sclick.baidu.com":"sp1.baidu.com\/5bU_dTmfKgQFm2e88IuM_a","1.su.bdimg.com":"dss0.bdstatic.com\/k4oZeXSm1A5BphGlnYG","2.su.bdimg.com":"dss1.bdstatic.com\/kvoZeXSm1A5BphGlnYG","3.su.bdimg.com":"dss2.bdstatic.com\/kfoZeXSm1A5BphGlnYG","4.su.bdimg.com":"dss3.bdstatic.com\/lPoZeXSm1A5BphGlnYG","5.su.bdimg.com":"dss0.bdstatic.com\/l4oZeXSm1A5BphGlnYG","6.su.bdimg.com":"dss1.bdstatic.com\/lvoZeXSm1A5BphGlnYG","7.su.bdimg.com":"dss2.bdstatic.com\/lfoZeXSm1A5BphGlnYG","8.su.bdimg.com":"dss3.bdstatic.com\/iPoZeXSm1A5BphGlnYG","nssug.baidu.com":"sp1.baidu.com\/8qUZeT8a2gU2pMbgoY3K","up.photo.baidu.com":"sp1.baidu.com\/6_R1fD_bAAd3otqbppnN2DJv","suggestion.baidu.com":"sp1.baidu.com\/5a1Fazu8AA54nxGko9WTAnF6hhy","t10.baidu.com":"t10.baidu.com","t11.baidu.com":"t11.baidu.com","t12.baidu.com":"t12.baidu.com","play.baidu.com":"dss3.baidu.com\/5LgHhXSm2Q5IlBGlnYG","olime.baidu.com":"sp1.baidu.com\/8bg4cTva2gU2pMbgoY3K","i.baidu.com":"sp1.baidu.com\/74oIbT3kAMgDnd_","c.baidu.com":"sp1.baidu.com\/9foIbT3kAMgDnd_","b1.baidu.com":"dss1.baidu.com\/9uN1bjeh1BF3odCf","nsclick.baidu.com":"sp1.baidu.com\/8qUJcD3n0sgCo2Kml5_Y_D3","b1.bdstatic.com":"dss0.bdstatic.com\/9uN1bjq8AAUYm2zgoY3K","i7.baidu.com":"dss0.baidu.com\/73F1bjeh1BF3odCf","i8.baidu.com":"dss0.baidu.com\/73x1bjeh1BF3odCf","i9.baidu.com":"dss0.baidu.com\/73t1bjeh1BF3odCf","ecma.bdimg.com":"dss1.bdstatic.com\/-0U0bXSm1A5BphGlnYG","tag.baidu.com":"sp1.baidu.com\/6LMFsjip0QIZ8tyhnq","hw.baidu.com":"sp1.baidu.com\/7KF1bjeh1BF3odCf","opendata.baidu.com":"sp1.baidu.com\/8aQDcjqpAAV3otqbppnN2DJv","open.baidu.com":"dss1.baidu.com\/8aQDcnSm2Q5IlBGlnYG","api.open.baidu.com":"sp1.baidu.com\/9_Q4sjW91Qh3otqbppnN2DJv","xiaodu.baidu.com":"sp1.baidu.com\/yLsHczq6KgQFm2e88IuM_a","s0.nuomi.bdimg.com":"dss1.bdstatic.com\/5eR1ciub_Q63otebn9fN2DJv","s1.nuomi.bdimg.com":"dss0.baidu.com\/5eN1ciub_Q63otebn9fN2DJv","s2.nuomi.bdimg.com":"dss2.bdstatic.com\/5eZ1ciub_Q63otebn9fN2DJv","vse.baidu.com":"sp3.baidu.com\/6qUDsjip0QIZ8tyhnq","himg.bdimg.com":"dss1.bdstatic.com\/7Ls0a8Sm1A5BphGlnYG","ss.bdimg.com":"dss1.bdstatic.com\/5aV1bjqh_Q23odCf","ecmb.bdimg.com":"dss0.bdstatic.com\/-0U0bnSm1A5BphGlnYG","e.su.bdimg.com":"dss0.bdstatic.com\/-4oZeXSm1A5BphGlnYG","sensearch.baidu.com":"sp1.baidu.com\/5b11fzupBgM18t7jm9iCKT-xh_","sestat.baidu.com":"sp1.baidu.com\/5b1ZeDe5KgQFm2e88IuM_a","cdn00.baidu-img.cn":"dss0.bdstatic.com\/9bA1vGba2gU2pMbfm9GUKT-w","cdn01.baidu-img.cn":"dss0.bdstatic.com\/9bA1vGfa2gU2pMbfm9GUKT-w"}
+};
+
+    var s_session={
+        "logId":"3284779607",
+        "seqId":"3284779753",
+        "sessionId":"",
+        "debug":false,
+        "userTips":"{}",
+        "curmod":"2",
+        "firstmod":"",
+        "logoCode":false,
+        "isFesLogo":false,
+        "sid":"34443_35106_31660_35457_34584_35490_35245_34578_35233_35318_26350",
+        "mSid":"",
+        "sample_value":"",
+        "isLogin":false,
+        "agingVoice": ""
+    };
+
+            window.__async_strategy = 2;
+            </script>              
+            </body>
+            </html>

@@ -1,0 +1,98 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <title>wuli树周-MC铁杆联盟</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<!--[if lt IE 9]>
+<scriptsrc="http://css3mediaqueriesjs.googlecode.com/svn/trunk/css3mediaqueries.js"></scrip>
+<![endif]-->
+  <link rel="icon" href="/icon.ico" type="image/x-icon">
+  <body background="/ht.jpg">
+    </body>>
+</head>
+
+<!--设置蓝色框规格-->
+<style>
+  body{
+    font: 16px arial,'Microsoft Yahei','Hiragino Sans GB',sans-serif;
+  }
+  h1{
+    margin: 0;
+    color:#3a87ad;
+    font-size: 26px;
+  }
+  .content{
+    width: 70%;
+    margin: 0 auto;
+   
+  }
+  .content >div{
+    margin-top: 200px;
+    padding: 20px;
+    background: #d9edf7;  
+    border-radius: 12px;
+  }
+  .content dl{
+    color: #2d6a88;
+    line-height: 40px;
+  } 
+  .content div div {
+    padding-bottom: 20px;
+    text-align:center;
+  }  
+</style>
+
+<!--网站正文开始-->
+<body>
+  <div class="content">
+      <div>
+  <h1>本页面尚未完工，敬请期待！</h1>
+  <h3>推荐视频</h3>
+  <h4>更多视频请至wuli的bilibili主页观看</h4>
+  <iframe src="//player.bilibili.com/player.html?aid=202891984&bvid=BV1Ya411w7Y3&cid=260510974&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="60%" height="450" high_quality="1" danmaku="1"> </iframe>
+  <dl> 
+  <dl>
+    <h3>网页背景音乐(点击欣赏)<h3>
+      <!--音乐播放代码开始-->
+  <div style="width:30px; height:12px; margin:40px auto">
+    <audio id="music2" src="/musics/1.mp3"  loop="loop">你的浏览器不支持audio标签。</audio>
+        <a href="javascript:playPause();"><img src="/images/pause.gif" width="48" height="50" id="music_btn2" border="0"></a>
+   </div>
+<script src="https://cdn.bootcss.com/jquery/1.8.2/jquery.min.js"></script>
+<script>
+$("#audio_btn").click(function(){
+	var music = document.getElementById("music");
+	if(music.paused){
+		music.play();
+		$("#music_btn").attr("src","/images/play.gif");
+	}else{
+		music.pause();
+		$("#music_btn").attr("src","/images/pause.gif");
+	}
+});
+
+function playPause() {
+    var music = document.getElementById('music2');
+    var music_btn = document.getElementById('music_btn2');
+    if (music.paused){
+        music.play();
+        music_btn.src = '/images/play.gif';
+    }
+    else{
+        music.pause();
+        music_btn.src = '/images/pause.gif'; 
+    }
+}
+</script>
+<!--音乐播放代码结束-->
+</h3>
+<a href="/">返回主页</a>
+<p class="mdui-m-t-2">
+    	  <h5>Copyright © 2021-2022 <a href="/" title="MC铁杆联盟" target="_blank">MC铁杆联盟</a>. All rights reserved.<h5>
+          <dl>
+            <!--站长统计-->
+            <script type="text/javascript">document.write(unescape("%3Cspan id='cnzz_stat_icon_1280782322'%3E%3C/span%3E%3Cscript src='https://v1.cnzz.com/z_stat.php%3Fid%3D1280782322%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>
+            </dl>
+</div>
+</body>
+</html>
